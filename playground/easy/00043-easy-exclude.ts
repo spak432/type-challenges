@@ -20,11 +20,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type MyExclude<T, U> = T extends U ? never : T;
+type MyExclude<T, U> = T extends U ? never : T
 
 /* _____________ Test Cases _____________ */
+import { KeyObject } from 'node:crypto'
 import type { Equal, Expect } from '@type-challenges/utils'
-import { KeyObject } from 'crypto'
 
 type cases = [
   Expect<Equal<MyExclude<'a' | 'b' | 'c', 'a'>, 'b' | 'c'>>,
